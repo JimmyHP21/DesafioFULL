@@ -1,0 +1,97 @@
+<div class="sample" fxFlex fxLayout="column">
+  <div class="repo-list-container content" fxLayout="row" fxLayoutAlign="start center">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="16px grid" fxFlex="100%">
+      <div class="line-card" fxFlex.lg="100" fxFlex.lt-lg="100" fxFlex.xs="100">
+        <div class="table__content">
+          <table class="table__body">
+            <tr class="table__header">
+              <th> Número do título </th>
+              <th> Nome do devedor </th>
+              <th> Qtde de parcelas </th>
+              <th> Valor original </th>
+              <th> Dias em atraso </th>
+              <th> Valor atualizado </th>
+            </tr>
+
+            <tr class="table__itens" *ngFor = "let row of rows">
+              <td> {{ row.titleNumber }} </td>
+              <td> {{ row.nameDebtor }} </td>
+              <td> {{ row.debtInstallments.length }} </td>
+              <td> R$ {{ totalValueMethod(row.debtInstallments) }} </td>
+              <td> {{ days(row.debtInstallments) }} em Atraso</td>
+              <td> R$ {{ totalValueAtrasoMethod(row.percentFees, row.percentFine, row.debtInstallments )}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="input__content">
+          <h1>Cadastro de um título</h1>
+
+          <form [formGroup]="form" novalidate>
+            <div class="input__div">
+              <input type="number"
+                     required
+                     formControlName="TitleNumber"
+                     placeholder="Número do título"/>
+            </div>
+
+            <div class="input__name">
+              <div class="input__div_name">
+                <input type="text"
+                       formControlName="NameDebtor"
+                       placeholder="Nome do devedor"/>
+              </div>
+              <div class="input__div">
+                <input id="cpf"
+                       maxlength="15"
+                       type="text"
+                       mask="000.000.000-99"
+                       formControlName="CpfDebtor"
+                       autocomplete="off"
+                       placeholder="CPF do devedor"/>
+              </div>
+            </div>
+
+            <div class="input__multa">
+               <div class="input__div">
+                <input type="number"
+                       formControlName="PercentFees"
+                       placeholder="% de juros"/>
+              </div>
+              <div class="input__div">
+                <input type="number"
+                       formControlName="PercentFine"
+                       placeholder="% de multa"/>
+              </div>
+              <div class="input__div">
+                <input type="text"
+                       [(ngModel)]="totalValue"
+                       [ngModelOptions]="{standalone: true}"
+                       mask="separator.0"
+                       thousandSeparator=","
+                       placeholder="Valor Total"/>
+              </div>
+            </div>
+
+            <div class="input__valor">
+             <div class="input__div">
+               <input type="number"
+                      [(ngModel)]="totalParcel"
+                      [ngModelOptions]="{standalone: true}"
+                      max="12"
+                      min="1"
+                      placeholder="Numero de parcelas"/>
+             </div>
+           </div>
+
+
+          </form>
+
+          <button [ngClass]="form.valid ? 'active' : 'disabled'" type="submit" (click)="onSubmit()" [disabled]="!form.valid">
+            Salvar
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

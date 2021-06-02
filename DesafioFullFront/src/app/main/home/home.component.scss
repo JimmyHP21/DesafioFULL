@@ -1,0 +1,198 @@
+.sample {
+  min-height: 100%;
+  background-color: #2a0744;
+  margin: 1rem 2rem 0 2rem;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: none;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+
+  .repo-list-container {
+    min-width: 100%;
+    margin: 2rem;
+    .line-card {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+
+      .table__content {
+        background-color: #fff;
+        border-radius: 2rem 2rem 1rem 1rem;
+        -webkit-font-smoothing: antialiased;
+        width: 45%;
+        height: 50rem;
+
+        .table__body {
+          width: 100%;
+          border-collapse: collapse;
+
+          .table__header {
+            height: 4rem;
+          }
+
+          .table__itens + .table__itens {
+            border-top: 2px solid #c815de38;
+          }
+
+          .table__itens {
+            height: 4rem;
+          }
+
+          th:first-child {
+            padding: 1rem;
+            border-radius: 1rem 0 0 0;
+          }
+
+          td {
+            padding: 1rem;
+          }
+
+          tr:last-child td:first-child {
+            padding: 1rem;
+            border-radius: 0 0 0 1rem;
+          }
+
+          tr:last-child td:last-child {
+            padding: 1rem;
+            border-radius: 0 0 1rem 0;
+          }
+
+          th:last-child {
+            padding: 1rem;
+            border-radius: 0 1rem 0 0;
+          }
+
+          th {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+            text-align: left;
+            background-color: #DB0066;
+            color: #fff;
+          }
+        }
+      }
+
+      .input__content {
+        background-color: #fff;
+        border-radius: 1rem;
+        -webkit-font-smoothing: antialiased;
+        width: 45%;
+        height: 50rem;
+
+        h1 {
+          font-weight: 800;
+          color: #DB0066;
+          margin: 2rem 15rem;
+        }
+
+        form {
+          margin: 1rem 6rem;
+
+          .input__div + .input__div {
+            margin-top: 1rem;
+          }
+
+          .input__div {
+            position: relative;
+
+            input {
+              height: 2rem;
+              width: 100%;
+              border: 1px solid #c815de38;
+              border-radius: 1rem;
+              outline: 0;
+              padding: 1rem;
+              font-size: 1rem;
+              font-weight: 500;
+            }
+          }
+
+          .input__name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .input__div_name {
+              margin-top: 0;
+              width: 70%;
+              position: relative;
+
+              input {
+                height: 2rem;
+                width: 100%;
+                border: 1px solid #c815de38;
+                border-radius: 1rem;
+                outline: 0;
+                padding: 1rem;
+                font-size: 1rem;
+                font-weight: 500;
+              }
+            }
+
+            .input__div {
+              margin-top: 0;
+              width: 20%;
+            }
+          }
+
+          .input__multa {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .input__div {
+              margin-top: 0;
+              width: 28%;
+            }
+          }
+
+          .input__valor {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .input__div {
+              margin-top: 0;
+              width: 28%;
+            }
+          }
+        }
+
+        .active {
+          cursor: pointer;
+          margin: 15rem 1rem 1rem 42rem;
+          width: 5rem;
+          height: 5rem;
+          background-color: #DB0066;
+          border: none;
+          border-radius: 10rem;
+          font-weight: 800;
+          color: #fff;
+          font-size: 1.2rem;
+        }
+
+        .disabled {
+          cursor: not-allowed;
+          margin: 15rem 1rem 1rem 42rem;
+          width: 5rem;
+          height: 5rem;
+          background-color: #a08b95;
+          border: none;
+          border-radius: 10rem;
+          font-weight: 800;
+          color: #fff;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+}
