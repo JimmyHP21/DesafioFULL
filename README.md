@@ -7,8 +7,8 @@ Run  "npm start"
 </p>
 
 *Technologies Used*
-<li>
-  <ul> .Net </ul>  
-  <ul> C# </ul>  
-  <ul> Angular </ul>  
-</li>
+<ul>
+  <li> .Net </li>  
+  <li> C# </li>  
+  <li> Angular </li>  
+</ul>
