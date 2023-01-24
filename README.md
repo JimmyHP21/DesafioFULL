@@ -1,8 +1,11 @@
 # DesafioFULL
-Projeto avaliacao paschoalotto
+<h1>Technical Challenge</h1>
+Back-End Software Engineer
 
-Rodar ele com "npm start" para pegar as conf de proxy
+<p>
+Run  "npm start" 
+</p>
 
-tecnologias utilizadas
+*Technologies Used*
   c#
   angular
