@@ -1,4 +1,3 @@
-# DesafioFULL
 <h1>Technical Challenge</h1>
 Back-End Software Engineer
 
